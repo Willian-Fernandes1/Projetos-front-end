@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+        <title> Formulário </title>
+		</head>
+		<body>
+
+	         <main class="container">
+			 <h1>Cadastro de Cliente</h1>    
+    <form action="cadastraCliente.php" method="POST" id="prencherformulario">        
+    <div class="error-box" id="error-box">preencha os campos brancos:</div>
+		
+			   
+<fieldset>
+<legend> Dados pessoais </legend>
+<div class="input-group">
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" minlength="2" maxlength="50" >
+<span class="error" id="error-nome"></span>
+</div>
+
+
+<div class="input-group">
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email" placeholder="e-mail">
+<span class="error" id="error-email"></span>
+</div>
+
+<div class="input-group"><label for="cpf">CPF:</label>
+<input type="text" id="cpf" name="cpf" placeholder=" 000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" >
+<span class="error" id="error-cpf"></span>
+</div>
+
+
+<div class="input-group"><label for="idade">Idade:</label>
+<input type="number" id="idade" name="idade" placeholder="Idade" >
+<span class="error" id="error-idade"></span>
+</div>
+
+<div class="input-group"><label for="telefone">Telefone:</label>
+<input type="tel" id="telefone" name="telefone" placeholder="ex:(00) 00 0 0000-0000" >
+<span class="error" id="error-telefone"></span>
+</div>
+
+<div class="input-group"><label for="data_nascimento">Data de Nascimento:</label>
+ <input type="date" id="data_nascimento" name="data_nascimento">
+ <span class="error" id="error-data_nascimento"></span>
+</div>
+
+</fieldset>       
+<div class="input-group">
+	<label for="sexo">Sexo:</label>
+	<select id="sexo" name="sexo" >
+	<option value="" disabled selected hidden>&nbsp;</option>
+	<option value="masculino">Masculino</option>
+	<option value="feminino">Feminino</option></select>
+	<span class="error" id="error-sexo"></span>
+</div>
+			        <div class="input-group">
+			        <label for="estadocivil">Estado Civil:</label>
+                    <select id="estadocivil" name="estadocivil">
+					<option value="" disabled selected hidden>&nbsp;</option>
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viuvo">Viúvo(a)</option>          
+                    </select>
+					<span class="error" id="error-estadocivil"></span>
+				</div>
+				
+		         
+			      <fieldset>				 
+				  <legend>Endereço de Entrega</legend>
+				<label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" >
+					<span class="error" id="error-cep"></span>
+
+					<label for="tipo_logradouro">Tipo de Logradouro:</label>
+					<select id="tipo_logradouro" name="tipo_logradouro" >
+					<option value="" disabled selected hidden>&nbsp;</option>
+					<option value="rua">Rua</option>
+                      <option value="avenida">Avenida</option>
+                      <option value="praca">Praça</option>
+					  </select>
+						<span class="error" id="error-tipo_logradouro"></span>
+
+                      <label for="logradouro">Logradouro:</label>
+					  <input type="text" id="logradouro" name="logradouro" >
+					  <span class="error" id="error-logradouro"></span>
+
+					   <label for="bairro">Bairro:</label>
+					   <input type="text" id="bairro" name="bairro" >
+					   <span class="error" id="error-bairro"></span>
+					   
+					   <label for="cidade">Cidade:</label>
+                       <input type="text" id="cidade" name="cidade" >
+					   <span class="error" id="error-cidade"></span>
+					   <p>
+					   <label for="estado">Estado:</label>
+                       <input type="text" id="estado" name="estado" >
+					   <span class="error" id="error-estado"></span>
+                       
+					   <label for="campo_leitura">País:</label>
+                       <input type="text" id="campo_leitura" name="campo_leitura" readonly value="Brasil">
+                       </p>
+					   </fieldset>
+					   <fieldset>
+                       <legend>Informações Adicionais</legend>
+					   <div class="input-group">
+					    
+					    
+					  
+						<label for="interesses">Seus interesses:</label>
+						<select id="interesses" name="interesses" size= "2" >
+						<option value="filmes">Filmes</option>
+						<option value="informatica">Informática</option>
+						<option value="games">games</option>
+						<option value="livros">Livros</option>
+						<option value="roupas">Roupas</option>
+						<option value="calçados">calçados</option>
+						<option value="acessórios">acessórios</option>
+						<option value="animes">animes</option>
+						<option value="alimentos">alimentos</option>
+						<option value="smartphones">smartphones</option>
+					</select>
+					<span class="error" id="error-interesses"></span>
+				</div>
+				</fieldset>
+				<fieldset>
+				<div class="input-group">
+				<label for="informacoes_complementares">Informações Complementares:</label>
+				<textarea id="informacoes_complementares" name="informacoes_complementares"  rows="4" cols="50"></textarea>
+				<span class="error" id="error-informacoes_complementares"></span> </div>
+                
+				<div class="input-group">
+					<label for="arquivo">Anexar Arquivo:</label>
+					<input type="file" accept=".png, .jpg, .jpeg" id="arquivo" name="arquivo">
+					<span class="error" id="error-arquivo"></span>
+					<input type="hidden" name="campo_oculto" value="ValorOculto">
+				</div>
+				<fieldset>
+				<legend>Login</legend>
+				<div class="input-group">
+				<label for="usuario">Usuário</label>
+				<input type="text" id="usuario" name="usuario">
+				<span class="error" id="error-usuario"></span>
+				</div>
+				<div class="input-group">
+				<label for="senha">Senha</label>
+				<input type="password" id="senha" name="senha">
+				<span class="error" id="error-senha"></span>
+				</div>
+			</fieldset>
+			</fieldset>
+			
+			<button type="submit">Enviar</button> 
+			
+		</form>
+		</main>
+    
+		<script>
+			// Ouvinte para o evento DOMContentLoaded que é carregado quando o HTML da página for carregado completamente
+			document.addEventListener("DOMContentLoaded", function () {
+			const form = document.getElementById("prencherformulario");
+			const textFields = ["nome", "email", "cpf", "idade", "telefone", "data_nascimento", "cep", "logradouro", "bairro", "cidade", "estado", "estadocivil", "sexo", "tipo_logradouro", "interesses", "informacoes_complementares", "arquivo"];
+	
+			form.addEventListener("submit", function (event) {
+				let valid = true;
+				document.querySelectorAll('.error').forEach(el => el.textContent = '');
+				document.getElementById("error-box").style.display = 'none';
+			
+				textFields.forEach(field => {
+				const input = document.getElementById(field);
+				if (!input.value) {
+					valid = false;
+					document.getElementById(`error-${field}`).textContent = `O campo ${input.previousElementSibling.textContent} está em branco.`;
+				}
+				});
+				const usuario = document.getElementById("usuario");
+					// checagem se o tamanho do texto digitado em usuario tem menos que 5 caracteres, caso senha menos que 5 variável let retorna falso
+					if (usuario.value.length < 5) {
+						valid = false;
+						document.getElementById("error-usuario").textContent = "O usuário deve ter no mínimo 5 caracteres.";
+					}
+				const senha = document.getElementById("senha");
+				const senhaRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+				if (!senhaRegex.test(senha.value)) {
+				valid = false;
+				document.getElementById("error-senha").textContent = "A senha deve conter números, letras, símbolos e ser maior que 8 caracteres.";
+				}
+			
+				if (!valid) {
+				event.preventDefault();
+				document.getElementById("error-box").style.display = 'block';
+				}
+			});
+			
+			const applyMask = (input, maskFunction) => {
+				input.addEventListener("input", (event) => {
+			    event.target.value = maskFunction(event.target.value);
+				});
+			};
+			
+			const cpfMask = value => value
+				.replace(/\D/g, "")
+				.replace(/(\d{3})(\d)/, "$1.$2")
+				.replace(/(\d{3})(\d)/, "$1.$2")
+				.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+			
+			const telefoneMask = value => value
+				.replace(/\D/g, "")
+				.replace(/(\d{2})(\d)/, "($1) $2")
+				.replace(/(\d{4,5})(\d{4})$/, "$1-$2");
+			
+			const cepMask = value => value
+				.replace(/\D/g, "")
+				.replace(/(\d{5})(\d{3})$/, "$1-$2");
+			
+			applyMask(document.getElementById("cpf"), cpfMask);
+			applyMask(document.getElementById("telefone"), telefoneMask);
+			applyMask(document.getElementById("cep"), cepMask);
+			
+			
+			});
+			</script>
+
+
+
+
+
+		</body>
+		</html>
+		

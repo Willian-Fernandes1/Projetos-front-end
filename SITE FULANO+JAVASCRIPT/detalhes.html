@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>detalhes do curriculo</title>
+  <script>
+    function swapImage() {
+        const image = document.getElementById('image');
+        if (image.src.includes('1.jpeg')) {
+            image.src = '5.png';
+        } else {
+           image.src = '1.jpeg';
+        }
+    }
+    
+        function toggleVisibility(event) {
+            const target = event.target;
+            const topic = target.closest('.topic');
+            const text = topic.querySelector('p, li, ol, ul, img, a');
+
+            if (event.type === 'click') {
+                text.style.display = 'none';
+            } else if (event.type === 'dblclick') {
+                text.style.display = 'block';
+            }
+        }
+</script> 
+
+<body>
+    <main>
+      <img id="image" src="1.jpeg " alt="imagem" width="120" height="120" onclick="swapImage()">
+      <link rel="stylesheet" href="detalhes.css" >
+      <h1>Alirio ribeiro</h1>
+      <h2>Perfil</h2>
+      <section class="topic" onclick="toggleVisibility(event)" ondblclick="toggleVisibility(event)">
+        <h2>Desenvolvedor de back end júnior</h2>
+          <ol>
+            <li><h3>Empresa Oracle Brasil (SP) (abril de 2012 - dezembro de 2014)</h3>
+            <li>Participou da integração e manutenção dos sites em formato HTML, garantindo a estabilidade dos sites da empresa.</li>
+            <li>Colaborou na elaboração e construção dos bancos de dados, fornecendo técnicas para garantir a segurança destes.</li>
+            <li>Desenvolveu, juntamente com outros profissionais da área, técnicas de otimização do sistema de banco de dados.</li>
+          </ol>
+        </section>
+      <section class="topic" onclick="toggleVisibility(event)" ondblclick="toggleVisibility(event)">
+        <h2>Dsenvolvedor de software sênior </h2>
+       <ol>
+          <li><h3>Empresa microsoft Brasil(SP)( março de 2015 - Julho de 2020)</h3>
+          <li>desenvolveu com a cooperação tecnicas de outros profissionais da área,métodos de segurança para os mais diversos tipos de software;</li>
+          <li>colaborou com o dessenvolvimento de software, utilizando a linguagem python e linguagem C;</li>
+          <li> Desenvolveu aplicações que permitiam a troca de informações de modo seguro entre os sistemas comunicativo de dados.</li>
+       </ol>
+      <a href="index.html"> voltar a página principal</a>
+    </section>
+    </main>
+  </body>
+</html>

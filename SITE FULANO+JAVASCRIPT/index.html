@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <title>curiculo do Alirio Ribeiro</title>
+  <script>
+    function swapImage() {
+        const image = document.getElementById('image');
+        if (image.src.includes('1.jpeg')) {
+            image.src = '5.png';
+        } else {
+           image.src = '1.jpeg';
+        }
+    }
+    
+        function toggleVisibility(event) {
+            const target = event.target;
+            const topic = target.closest('.topic');
+            const text = topic.querySelector('p, li, ol, ul, img, a');
+
+            if (event.type === 'click') {
+                text.style.display = 'none';
+            } else if (event.type === 'dblclick') {
+                text.style.display = 'block';
+            }
+        }
+</script> 
+
+  <body>
+    <main>
+      <img id="image" src="1.jpeg " alt="imagem" width="120" height="120" onclick="swapImage()">
+
+      <link rel="stylesheet" href="style.CSS" >
+
+      <h1>Alirio ribeiro</h1>
+      
+      <section class="topic" onclick="toggleVisibility(event)" ondblclick="toggleVisibility(event)">
+      <h2>PERFIL</h2>
+
+        <p>
+          Alirio Ribeiro nasceu no estado do pará, em 1995 e aos 16 ano de idade
+          começou a se encantar pela área da tecnologia, que anos mas tarde,
+          após se mudar para o estado do Rio Grande do Norte, acabou ingressando
+          a vida acadêmica nas áreas de TI (tecnologia da informação), e com
+          isso, mergulhando definitivamente nas áreas de programação
+          tecnológica.
+        
+
+        
+          Ainda na faculdade, antes mesmo de concluir, Alirio já começou a
+          trabalhar na empresa de tecnologia, chamada Oracle Brasi(SP), onde
+          começou a desenvolver seus primeiros projetos de programação e
+          expandindo ainda mais os seus conhecimentos na área e contribuindo com
+          grandes melhorias para o desenvolvimento da Oracle Brasil(SP).
+        </p>
+      </section>
+
+      <section class="topic" onclick="toggleVisibility(event)" ondblclick="toggleVisibility(event)">
+        <h2>PRINCIPAIS COMPETÊNCIAS</h2>
+        <ol>
+          <li>Programação em linguagem C</li>
+          <li>Programação em linguagem python</li>
+          <li>Desenvolvedor mobile</li>
+          <li>desenvolvedor em front end e back end</li>
+        </ol>
+      </section>
+      <section class="topic" onclick="toggleVisibility(event)" ondblclick="toggleVisibility(event)">
+
+        <h2>FORMAÇÃO ACADÊMICA</h2>
+
+        <p>
+          Alirio teve sua formação em TI(tenologia da informação),C&T(ciência e
+          tecnologia),na Universidade federal do rio grande do norte
+          <a href="https://www.ufrn.br/">(UFRN)</a>
+        </p>
+      </section>
+      <section class="topic" onclick="toggleVisibility(event)" ondblclick="toggleVisibility(event)">
+        <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+
+        <ul>
+          <li>
+          1.Empresa Oracle Basil(SP)
+        
+        <ul>
+          <li>programção em linguagem python</li>
+          <li>desenvolvedor de back end</li>
+        </ul>
+      </li>
+      <li>
+          2.Empresa microsoft Brasil(SP)
+        <ul>
+        
+          <li>programação em linguagem C</li>
+          <li>programação front end</li>
+          <li>desenvolvedor de mobile</li>
+        </ul>
+        </li>
+        </ul>
+
+        <a href="detalhes.html">veja as experiências profissionais em detalhes</a>
+      </section>
+      <section class="topic" onclick="toggleVisibility(event)" ondblclick="toggleVisibility(event)">
+        <h2>CONTATO</h2>
+
+        <ul>
+        <li>
+          <img src="4.png" alt="fone" width="30" height="30" > Rua avenida
+          galvão n°345, bairro: santa luzia, Sao Paulo.
+        </li>
+        <li>
+          <img src="3.png" alt="fone" width="30" height="30">
+          <a href="tel+5511987677791">87677791</a>
+        </li>
+        <li>
+         <img src="2.png" alt="fone" width="30" height="30" >
+          <a href="email:alirioribeiro@gmail.com">alirioribeiro@gmail.com</a>
+        </li>
+      </ul>
+      </section>
+    </main>
+  </body>
+</html>
